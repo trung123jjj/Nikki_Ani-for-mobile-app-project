@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         androidx.appcompat.widget.AppCompatButton btnEnter = findViewById(R.id.btnEnter);
 
         ValueAnimator animator = ValueAnimator.ofFloat(0f, 1f);
-        animator.setDuration(5000);
+        animator.setDuration(3000);
         animator.setRepeatCount(ValueAnimator.INFINITE);
         animator.setRepeatMode(ValueAnimator.REVERSE);
         animator.addUpdateListener(animation -> {
