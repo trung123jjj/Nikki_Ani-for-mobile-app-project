@@ -5,6 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     android:background="@drawable/gradient_background"
     tools:context=".LoginActivity">
 
@@ -18,19 +20,11 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:layout_width="30dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="20dp"
-                android:background="@android:color/transparent"
-                android:src="@drawable/go_back_button" />
-
             <LinearLayout
-                android:layout_width="300dp"
-                android:layout_height="100dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="90dp"
                 android:layout_marginStart="70dp">
 
                 <ImageView
@@ -55,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:text="ひさしぶり!"
                 android:textSize="50sp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 android:layout_marginTop="7dp"
@@ -70,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:text="It's nice to see you back"
                 android:textSize="15sp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:textColor="#FFFFFF"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
@@ -80,7 +74,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
@@ -90,24 +84,27 @@
 
                 <ImageView
                     android:layout_width="40dp"
-                    android:layout_height="34dp"
+                    android:layout_height="32dp"
                     android:src="@drawable/username_icon" />
 
                 <EditText
                     android:id="@+id/editTextUsername"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
                     android:ems="10"
+                    android:textSize="18sp"
                     android:hint="Username"
-                    android:textAlignment="center"
+                    android:gravity="center"
                     android:textColor="#FFFFFF"
-                    android:textColorHint="#FFFFFF" />
+                    android:textColorHint="#FFFFFF"
+                    android:maxLines="1"
+                    android:inputType="text" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
@@ -117,19 +114,21 @@
 
                 <ImageView
                     android:layout_width="40dp"
-                    android:layout_height="31dp"
+                    android:layout_height="32dp"
                     android:src="@drawable/password_icon" />
 
                 <EditText
                     android:id="@+id/editTextPassword"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:ems="10"
+                    android:textSize="18sp"
                     android:background="@drawable/edittext_background"
                     android:hint="Password"
-                    android:textAlignment="center"
+                    android:gravity="center"
                     android:textColor="#FFFFFF"
                     android:textColorHint="#FFFFFF"
+                    android:maxLines="1"
                     android:inputType="textPassword"/>
 
             </LinearLayout>
@@ -143,12 +142,13 @@
                 android:textSize="16sp"
                 android:textColor="#FFFFFF"
                 android:layout_marginTop="16dp"
-                android:textAlignment="center"
+                android:layout_marginEnd="33dp"
+                android:gravity="right"
                 android:fontFamily="sans-serif-medium"
                 />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnEnter"
+                android:id="@+id/getInBtn"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
                 android:layout_marginTop="64dp"
@@ -157,13 +157,13 @@
                 android:text="Log in"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
-                android:textAlignment="center"
+                android:gravity="center"
                 android:textStyle="bold"
                 android:background="@drawable/intropage_bg_button_gradient"
                 android:stateListAnimator="@null"/>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="400dp"
                 android:layout_height="match_parent"
                 android:layout_marginStart="82dp"
                 android:layout_marginEnd="70dp"

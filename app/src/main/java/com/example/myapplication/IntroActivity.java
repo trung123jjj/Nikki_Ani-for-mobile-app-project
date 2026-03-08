@@ -12,20 +12,21 @@ import androidx.core.view.WindowInsetsControllerCompat;
 import android.animation.ValueAnimator;
 import android.graphics.drawable.GradientDrawable;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
-public class LoginActivity extends AppCompatActivity {
-    private EditText userEdt, passEdt;
-    private Button loginBtn;
+public class IntroActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_intro);
 
-        initView();
-
+        Button getInBtn = findViewById(R.id.getInBtn);
+        getInBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(IntroActivity.this, LoginActivity.class));
+            }
+        });
 
         // Fix status bar màu tối
         Window window = getWindow();
@@ -42,7 +43,6 @@ public class LoginActivity extends AppCompatActivity {
         WindowInsetsControllerCompat controller =
                 new WindowInsetsControllerCompat(window, decorView);
         controller.setAppearanceLightStatusBars(false);
-
         // ✅ Thêm animated gradient vào đây
         androidx.appcompat.widget.AppCompatButton btnEnter = findViewById(R.id.getInBtn);
 
@@ -80,25 +80,4 @@ public class LoginActivity extends AppCompatActivity {
 
         return 0xFF000000 | (r << 16) | (g << 8) | b;
     }
-
-    //Login setup
-    private void initView() {
-        userEdt = findViewById(R.id.editTextUsername);
-        passEdt = findViewById(R.id.editTextPassword);
-        loginBtn = findViewById(R.id.getInBtn);
-
-        loginBtn.setOnClickListener(v -> {
-            if(userEdt.getText().toString().isEmpty() || passEdt.getText().toString().isEmpty()){
-                Toast.makeText(LoginActivity.this, "Please enter username and password", Toast.LENGTH_SHORT).show();
-            }else if(userEdt.getText().toString().equals("test") && passEdt.getText().toString().equals("test")){
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
-            }else{
-                Toast.makeText(LoginActivity.this, "Wrong username and password", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
-            }
-
-        }
-
+}
