@@ -50,6 +50,7 @@
                 android:text="ひさしぶり!"
                 android:textSize="50sp"
                 android:gravity="center"
+                android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textStyle="bold"
                 android:layout_marginTop="7dp"
@@ -65,9 +66,11 @@
                 android:text="It's nice to see you back"
                 android:textSize="15sp"
                 android:gravity="center"
+                android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="32dp"
+                android:layout_marginTop="4dp"
                 android:fontFamily="sans-serif-medium"
                 />
 
@@ -76,9 +79,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/edittext_background"
                 android:padding="10dp">
 
@@ -99,6 +102,8 @@
                     android:textColor="#FFFFFF"
                     android:textColorHint="#FFFFFF"
                     android:maxLines="1"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
                     android:inputType="text" />
             </LinearLayout>
 
@@ -106,9 +111,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/edittext_background"
                 android:padding="10dp">
 
@@ -129,6 +134,8 @@
                     android:textColor="#FFFFFF"
                     android:textColorHint="#FFFFFF"
                     android:maxLines="1"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
                     android:inputType="textPassword"/>
 
             </LinearLayout>
@@ -148,12 +155,12 @@
                 />
 
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/getInBtn"
+                android:id="@+id/logInBtn"
                 android:layout_width="match_parent"
                 android:layout_height="52dp"
-                android:layout_marginTop="64dp"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginEnd="40dp"
                 android:text="Log in"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
@@ -165,7 +172,7 @@
             <LinearLayout
                 android:layout_width="400dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="82dp"
+                android:layout_marginStart="65dp"
                 android:layout_marginEnd="70dp"
                 android:orientation="horizontal">
 
@@ -173,21 +180,23 @@
                     android:id="@+id/textViewDoNotHaveAccount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="3dp"
+                    android:layout_marginTop="10dp"
                     android:text="Don't have an account yet?"
                     android:textColor="#FFFFFF"
                     android:textSize="16sp" />
 
-                <TextView
-                    android:id="@+id/textViewRegister"
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/linksignupBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Register"
+                    android:text="sign up"
                     android:textColor="#87CEEB"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    android:layout_marginTop="3dp"
-                    android:layout_marginStart="4dp"/>
+                    android:gravity="left"
+                    android:background="@android:color/transparent"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="10dp" />
             </LinearLayout>
 
 

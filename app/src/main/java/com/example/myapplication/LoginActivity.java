@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         controller.setAppearanceLightStatusBars(false);
 
         // ✅ Thêm animated gradient vào đây
-        androidx.appcompat.widget.AppCompatButton btnEnter = findViewById(R.id.getInBtn);
+        androidx.appcompat.widget.AppCompatButton btnEnter = findViewById(R.id.logInBtn);
 
         ValueAnimator animator = ValueAnimator.ofFloat(0f, 1f);
         animator.setDuration(3000);
@@ -85,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
     private void initView() {
         userEdt = findViewById(R.id.editTextUsername);
         passEdt = findViewById(R.id.editTextPassword);
-        loginBtn = findViewById(R.id.getInBtn);
+        loginBtn = findViewById(R.id.logInBtn);
 
         loginBtn.setOnClickListener(v -> {
             if(userEdt.getText().toString().isEmpty() || passEdt.getText().toString().isEmpty()){
