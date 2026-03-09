@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    android:background="@drawable/gradient_background"
+    android:background="@color/main_color"
     tools:context=".SignupActivity">
 
     <ScrollView
@@ -185,8 +185,7 @@
                 android:textSize="16sp"
                 android:gravity="center"
                 android:textStyle="bold"
-                android:background="@drawable/intropage_bg_button_gradient"
-                android:stateListAnimator="@null"/>
+                android:background="@drawable/intropage_bg_button_gradient" />
 
 
         </LinearLayout>
